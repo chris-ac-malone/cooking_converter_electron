@@ -5,13 +5,56 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>Cooking Converter: Electron Edition</title>
   </head>
+  
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <script defer src="./index.js" ></script>
+    <div id="main-wrapper">
+      <h1 id="title">Cooking Converter: Electron Edition</h1>
+      <div id="span-wrapper">
+        <span>Convert </span>
+        <input type="number" name="quantity" id="quantity" value=0>
+        <select id="convert_from" name="convert_from">
+          <option>US Cups</option>
+          <option>US Teaspoons</option>
+          <option>US Tablespoons</option>
+          <option>US Gallons</option>
+          <option>US Quarts</option>
+          <option>US Pints</option>
+          <option>US Fluid Oz</option>
+          <option>Liters</option>
+          <option>Milliliters</option>
+          <option>Imperial Cups</option>
+          <option>Imperial Teaspoons</option>
+          <option>Imperial Tablespoons</option>
+          <option>Imperial Gallons</option>
+          <option>Imperial Quarts</option>
+          <option>Imperial Pints</option>
+          <option>Imperial Fluid Oz</option>
+        </select>
+        <span> to </span>
+        <select id="convert_to" name="convert_to">
+          <option>US Cups</option>
+          <option>US Teaspoons</option>
+          <option>US Tablespoons</option>
+          <option>US Gallons</option>
+          <option>US Quarts</option>
+          <option>US Pints</option>
+          <option>US Fluid Oz</option>
+          <option>Liters</option>
+          <option>Milliliters</option>
+          <option>Imperial Cups</option>
+          <option>Imperial Teaspoons</option>
+          <option>Imperial Tablespoons</option>
+          <option>Imperial Gallons</option>
+          <option>Imperial Quarts</option>
+          <option>Imperial Pints</option>
+          <option>Imperial Fluid Oz</option>
+        </select>
+      </div>
+      <p id="result">Result</p>
+    </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
